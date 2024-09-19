@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.car {
+  width: 100px;
+  position: relative;
+  top: 2.5rem;
+  left: 0;
+  transform: translateY(-50%);
+  animation: moveCar 2s linear infinite;
+}
+
+@keyframes moveCar {
+  0% { left: 0; }
+  100% { left: calc(100% - 100px); }
+}
+
+#__next{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container.__variable_1e4310.__variable_c3aa02{
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  @apply w-full max-w-lg bg-white p-8 rounded-lg shadow-md;
+}
+
+.input-field {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+.label.small{
+  @apply block text-gray-900 text-sm font-bold mb-4
+}
+
+.checkbox-label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+.checkbox {
+  @apply mr-2 leading-tight;
+}
+
+.button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+

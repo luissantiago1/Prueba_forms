@@ -1,0 +1,53 @@
+/* components/NavBar.css */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li{
+  padding: 0 1rem;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.icon-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+.auth a{
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
